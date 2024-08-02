@@ -1,0 +1,12 @@
+.section {
+  width: min(95%, 1500px);
+  margin: auto;
+  &__row {
+    margin: auto;
+  }
+
+  &__span,
+  .__title {
+    text-transform: none;
+  }
+}

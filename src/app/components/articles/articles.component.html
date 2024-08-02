@@ -1,0 +1,7 @@
+<ion-grid class="section">
+  <ion-row class="section__row">
+    <ion-col *ngFor="let article of articles;let i=index" class="section__col" size="12" size-sm="6" size-lg="4">
+      <app-article [article]="article" [i]="i"></app-article>
+    </ion-col>
+  </ion-row>
+</ion-grid>
