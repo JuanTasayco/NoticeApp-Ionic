@@ -1,10 +1,19 @@
-<ion-card (click)="redirectToUrl(article.url)">
-  <ion-card-subtitle class="ion-margin">
-    <span class="section__span text-primary">{{i+1}}.</span>
-    <span class="section__span article-source-name">{{article.source.name}}</span>
+<ion-card>
+  <ion-card-subtitle>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-margin">
+        <span class="section__number text-primary">{{i+1}}.</span>
+        <span class="section__name">{{article.source.name}}</span>
+      </ion-col>
+      <ion-col align="right">
+        <ion-button fill="clear" id="action-sheet-button" (click)="onOpenMenu()">
+          <ion-icon slot="icon-only" color="tertiary" name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
   </ion-card-subtitle>
 
-  <ion-card-title class="ion-padding-horizontal ion-margin-bottom">
+  <ion-card-title class="ion-padding-horizontal ion-margin-bottom" (click)="redirectToUrl(article.url)">
     {{article.title}}
   </ion-card-title>
 

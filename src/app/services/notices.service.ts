@@ -12,10 +12,11 @@ export class NoticesService {
   private pathUrl: string = 'https://newsapi.org/v2/'
   constructor(private httpClient: HttpClient) { }
 
-  getNotices(data?: any): Observable<NoticeResponse> {
+  getNotices(page: number): Observable<NoticeResponse> {
     const queryParams = new HttpParams()
-      .set('country', data?.country || 'us')
-      .set('category', data?.business || 'business')
+      .set('country', 'us')
+      .set('category', 'business')
+      .set('page', page)
     return this.httpClient.get<NoticeResponse>(`${this.pathUrl}top-headlines?${queryParams}`)
   }
 

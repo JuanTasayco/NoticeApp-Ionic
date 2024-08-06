@@ -1,3 +1,15 @@
 .text-primary {
   color: var(--ion-color-primary);
 }
+
+.section {
+  &__name {
+    text-transform: capitalize;
+    margin: 0 8px;
+    font-size: .8rem;
+  }
+
+  &__number {
+    font-size: .8rem;
+  }
+}
