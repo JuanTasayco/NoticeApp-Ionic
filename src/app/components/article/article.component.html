@@ -12,12 +12,14 @@
       </ion-col>
     </ion-row>
   </ion-card-subtitle>
+  <div class="cursor" (click)="redirectToUrl(article.url)">
+    <ion-card-title class="ion-padding-horizontal ion-margin-bottom ">
+      {{article.title}}
+    </ion-card-title>
 
-  <ion-card-title class="ion-padding-horizontal ion-margin-bottom" (click)="redirectToUrl(article.url)">
-    {{article.title}}
-  </ion-card-title>
+    <ion-img *ngIf="article.urlToImage" [src]="article.urlToImage"></ion-img>
+  </div>
 
-  <ion-img *ngIf="article.urlToImage" [src]="article.urlToImage"></ion-img>
 
   <ion-card-content *ngIf="article.description">
     <p>{{article.description}}</p>
