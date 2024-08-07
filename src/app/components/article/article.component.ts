@@ -55,7 +55,7 @@ export class ArticleComponent implements OnInit {
       title: this.article.title,
       text: this.article.description || '',
       url: this.article.url,
-      dialogTitle: this.article.author
+      dialogTitle: this.article.author || ''
     })
   }
 

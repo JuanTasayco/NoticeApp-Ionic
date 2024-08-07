@@ -1,4 +1,6 @@
-export const storedArticlesByCategory = {
+import { CategoryArticles } from "../interfaces/notice.interfaces";
+
+export const storedArticlesByCategory: CategoryArticles = {
     "business": {
         "page": 3,
         "articles": [

@@ -1,12 +1,18 @@
+
+export interface CategoryArticles {
+    [business: string]: NoticeResponse
+}
+
 export interface NoticeResponse {
-    status: string;
-    totalResults: number;
+    status?: string;
+    totalResults?: number;
     articles: Article[];
+    page?: number;
 }
 
 export interface Article {
     source: Source;
-    author: string;
+    author: string | null;
     title: string;
     description: null | string;
     url: string;

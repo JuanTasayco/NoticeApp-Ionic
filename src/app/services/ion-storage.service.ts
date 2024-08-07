@@ -27,7 +27,6 @@ export class IonStorageService {
 
   async saveNewFavoriteArticle(article: Article) {
     if (this._storage) {
-      console.log('existe storage para iniciar')
       const exist = this._localarticles.find(localArticle => localArticle.title === article.title)
 
       if (!exist) {
